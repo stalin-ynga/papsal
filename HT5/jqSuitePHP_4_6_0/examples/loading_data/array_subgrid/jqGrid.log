@@ -1,0 +1,26 @@
+Executed 2 query(s) - 2012-04-19 12:20:07
+Array
+(
+    [0] => Array
+        (
+            [time] => 2012-04-19 12:20:07
+            [query] => SELECT COUNT(*) AS COUNT  FROM ListArticleArray
+            [data] => 
+            [types] => 
+            [fields] => 
+            [primary] => 
+            [input] => 
+        )
+
+    [1] => Array
+        (
+            [time] => 2012-04-19 12:20:07
+            [query] => SELECT IdArtSuivi, ArtNo FROM ListArticleArray ORDER BY IdArtSuivi asc LIMIT 10 OFFSET 0
+            [data] => 
+            [types] => 
+            [fields] => 
+            [primary] => 
+            [input] => 
+        )
+
+)

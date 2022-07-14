@@ -1,0 +1,78 @@
+﻿body 
+{
+	font-family: Arial, Helvetica, sans-serif;font-size:11px;
+	margin-left:0px;margin-top:1%;
+}
+
+
+.tabla
+{
+	background-color:#FFFFFF;color:#000000;	
+	}	
+.tabla_titulo
+{
+	background-color:#999933;
+	color:#FFFFFF;
+	text-align:center;
+	font-family:Arial Narrow;
+	font-size:13px;
+	}
+	
+.tabla_bici
+{
+	background-color:#3A5F9A;color:#FFFFFF;text-align:center; 
+	font-family:Arial Narrow;font-size:12px;
+	}
+.textbox
+{
+	font-family:Arial, Helvetica, sans-serif;font-size:11px;text-transform:uppercase;	
+	}
+	
+.combobox
+{
+	font-family:Arial, Helvetica, sans-serif;font-size:11px;
+	}
+.button
+{
+	font-family:Verdana;font-size:11px;	
+	}
+.leyenda_titulo
+{
+	background-color:#A55129;color:White;text-align:center; font-size:10px;  
+	}
+	
+.titulo_cabecera
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#000066;
+	}	
+	
+		
+/*estado de cuenta*/	
+
+.logotext
+{
+	font-family:Verdana;font-size:9px;text-align:center;
+	}
+	.nombrearea
+{
+	font-family:Verdana;font-size:11px;text-align:center;font-weight:bold;
+	}
+	
+	.estadotext
+{
+	font-family:Verdana;font-size:16px;text-align:center;font-weight:bold;
+	}
+	
+	
+	.tablaestadocuenta
+{
+	font-family:Verdana;font-size:10px;
+	}
+	
+.botones
+{
+	text-align:right;
+	}

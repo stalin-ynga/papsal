@@ -1,0 +1,60 @@
+/* 
+    Document   : autocompleta
+    Created on : 05/12/2011, 02:12:28 PM
+    Author     : OLIVA
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.lista {
+    background-color: #FFFFFF;
+    padding: 2px 6px ;
+    width: 300px;
+    font: 8pt verdana;
+    color: #69f;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+.mover_lista {
+    background-color: highlight;
+    padding: 2px 6px;
+    cursor: pointer;
+    width: 300px;
+    font: 8pt verdana;
+    color: #fff;
+    margin-left: 5px;
+    text-transform: uppercase;
+
+}
+#div_solic,
+#div_destino,
+#div_proveedor,
+#div_vehiculo{
+    position: absolute;
+    background-color: #FFF;
+    text-align: left;   
+    font: 8pt verdana;
+    box-shadow: 5px 5px 5px #69f;
+    border-radius: 5px;
+}
+
+.txt_id{
+    width: 50px;
+}
+ .mas{
+                background: url(../img/add.gif)no-repeat;
+                width: 20px;
+                height: 20px;
+                text-decoration: none;
+                border: none;
+                cursor: pointer
+            }

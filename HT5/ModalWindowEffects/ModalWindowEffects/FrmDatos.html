@@ -1,0 +1,305 @@
+<?php
+
+
+session_start();
+if($_SESSION["User"] != "1"){header("index.php");}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<title>Tab Pane Demo (WebFX)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="local/webfxlayout.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<!-- this link element includes the css definitions that describes the tab pane -->
+<!--
+<link type="text/css" rel="stylesheet" href="tab.winclassic.css" />
+-->
+ <link href="css/tab.winclassic.css" rel="stylesheet" type="text/css" />
+<!-- the id is not needed. It is used here to be able to change css file at runtime -->
+
+<style type="text/css">
+
+.dynamic-tab-pane-control .tab-page {
+	height:		500px;
+}
+
+.dynamic-tab-pane-control .tab-page .dynamic-tab-pane-control .tab-page {
+	height:		100px;
+}
+
+html, body {
+	background:	ThreeDFace;
+}
+
+form {
+	margin:		0;
+	padding:	0;
+}
+
+/* over ride styles from webfxlayout */
+
+body {
+	margin:		10px;
+	width:		auto;
+	height:		auto;
+	text-align: center;
+}
+
+.dynamic-tab-pane-control h2 {
+	text-align:	center;
+	width:		auto;
+}
+
+.dynamic-tab-pane-control h2 a {
+	display:	inline;
+	width:		auto;
+}
+
+.dynamic-tab-pane-control a:hover {
+	background: transparent;
+}
+
+.Estilo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+.Estilo2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #00CC33;
+}
+.Estilo3 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.Estilo9 {
+	font-size: 12px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+.added {
+				float: center;
+				margin-right: 10px;
+			}
+.eliminar {
+				margin: 5px;
+			}
+.ta4 {
+	background-image: url(images/bg.png);
+	border: 1px solid #6297BC;
+	width: 250px;
+	height: 80px;
+    font-size: 12px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.fb5 {
+	background-color: #db6600;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	padding-bottom:3px;	
+	color: #ffffff;
+	border:1px solid #db6600;
+	background-image: url(images/button_bg.jpg);
+}
+.fb5:hover {
+	background-color: #000000;	
+	border:1px solid #000000;
+	background-image: url(images/button_bg_over.jpg);
+}
+.l2 { text-decoration:none; background-color:#99CCFF; }
+
+</style>
+<script type="text/javascript" src="js/tabpane.js"></script>
+<script type="text/javascript">
+
+function sumar(){document.getElementById("n3_11").value=((parseInt(document.getElementById("n3_1").value.substr(0,1))+parseInt(document.getElementById("n3_1").value.substr(1,1))+parseInt(document.getElementById("n3_2").value.substr(0,1))+parseInt(document.getElementById("n3_2").value.substr(1,1))+parseInt(document.getElementById("n3_3").value.substr(0,1))+parseInt(document.getElementById("n3_3").value.substr(1,1))+parseInt(document.getElementById("n3_4").value.substr(0,1))+parseInt(document.getElementById("n3_4").value.substr(1,1))+parseInt(document.getElementById("n3_5").value.substr(0,1))+parseInt(document.getElementById("n3_5").value.substr(1,1))+parseInt(document.getElementById("n3_5").value.substr(2,1))+parseInt(document.getElementById("n3_6").value.substr(0,1))+parseInt(document.getElementById("n3_6").value.substr(1,1))+parseInt(document.getElementById("n3_6").value.substr(2,1))+parseInt(document.getElementById("n3_7").value.substr(0,1))+parseInt(document.getElementById("n3_7").value.substr(1,1))+parseInt(document.getElementById("n3_8").value.substr(0,1))+parseInt(document.getElementById("n3_8").value.substr(1,1))+parseInt(document.getElementById("n3_9").value.substr(0,1))+parseInt(document.getElementById("n3_9").value.substr(1,1))+parseInt(document.getElementById("n3_10").value.substr(0,1))+parseInt(document.getElementById("n3_10").value.substr(1,1))+parseInt(document.getElementById("n3_10").value.substr(2,1)))%9);
+	}
+
+function guardar(){
+ 
+		document.f.guardar.value = "1";
+		document.f.codigo=document.f.Cod.value;
+		document.f.Cod.value = "A";
+	
+}
+	
+	function verifica(){
+		
+		
+			if(confirm("¿Desea Grabar?")) {
+             guardar();
+             return true;
+		                 }
+						 else{return false;}
+                
+}	
+		</script>
+</head>
+<body>
+
+
+<form name="f" action="EditaCotitular.php"  method="post" >
+<a href="principal.html" target="mainFrame" class="l2">Volver Al Inicio</a>
+<div class="tab-pane" id="tabPane1">
+
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+//tp1.setClassNameTag( "dynamic-tab-pane-control-luna" );
+//alert( 0 )
+</script>
+
+	
+<!-- 1 -------------------------------------------------------------------->
+	<div class="tab-page" id="tabPage3">
+		<h2 class="tab"> Mi Informacion Personal</h2>
+		
+	  <script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+		<center>
+<table width="778" border="0" class="tab">
+                            <tr>
+                              <td width="95"><span class="Estilo9">Usuario:</span></td>
+                              <td class="Estilo9" width="532"><input name="titular" type="text" disabled="disabled" class="Estilo9" id="titular" value="0002090793" size="10" maxlength="10"  />
+                                Cargo:
+                                  <input name="ficha2" type="text" disabled="disabled" class="Estilo9" id="ficha2" value="ALUMNO" size="20" maxlength="100" /> 
+                                  Estado:
+                              <input name="ficha" type="text" disabled="disabled" class="Estilo9" id="ficha" value="EN ACTIVIDAD" size="20" maxlength="100" /></td>
+                              <td width="137"><div align="right"><span class="Estilo2">(*)campos obligatorios</span></div></td>
+        </tr>
+        <tr>
+                              <td width="95">&nbsp;</td>
+                              <td width="532">&nbsp;</td>
+        </tr>
+      </table>
+
+<table width="819" border="0">
+                            <tr>
+                              <td width="813" bgcolor="#0099FF"><span class="Estilo3">Datos Del Alumno</span></td>
+        </tr>
+      </table>
+     
+<table width="802" border="0">
+<tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>
+<tr>
+                              <td width="109"><span class="Estilo9">Numbres:</span></td>
+                              <td width="678">
+                              
+              <input name="n4[]" type="text" class="Estilo9" id="n4[]" value="MIGUEL ANGEL"  size="50" maxlength="100" disabled="disabled" /></td>
+                            </tr>
+                         <tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>                            
+<tr>
+                              <td><span class="Estilo9">Paterno:</span></td>
+                              <td><span class="Estilo9">
+                                <input name="n9[]" type="text" class="Estilo9" id="n9[]" value="GARCIA" size="20" maxlength="100" disabled="disabled" />
+                                Materno:
+                                <input name="n10[]" type="text" class="Estilo9" id="n10[]" value="CHAVEZ" size="20" maxlength="100" disabled="disabled" />
+                              </span></td>
+                            </tr>
+                            <tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>                 
+<tr>
+                              <td><span class="Estilo9">Dni:</span></td>
+                              <td><span class="Estilo9">
+                                <input name="n12[]" type="text" class="Estilo9" id="n12[]" value="70751278" size="8" maxlength="8" disabled="disabled" />
+                                    Sexo:
+                                    <input name="n13[]" type="text" class="Estilo9" id="n13[]" value="MASCULINO"  size="30" maxlength="100"  disabled="disabled"/>
+                              Situacion:
+                              <input name="n10[]2" type="text" class="Estilo9" id="n10[]2" value="REGULAR" size="20" maxlength="100" disabled="disabled" />
+                              </span></td>
+                            </tr>
+                       <tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>     
+</table>
+                           <table width="819" border="0">
+                            <tr>
+                              <td width="813" bgcolor="#0099FF"><span class="Estilo3">Datos Academicos</span></td>
+                            </tr>
+      </table>
+      <table width="802" border="0">
+                            <tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>
+                            <tr>
+                              <td width="110"><span class="Estilo9">Facultad:</span></td>
+                              <td width="682"><span class="Estilo9">
+                              <input name="n28[]" type="text" class="Estilo9" id="n28[]" value="FAC. DE INGENIERIA DE SISTEMAS E INGENENIERIA CIVIL" size="55" maxlength="100" disabled="disabled" />
+                                Periodo De Ingreso:
+                              <input name="n29[]" type="text" class="Estilo9" id="n29[]" value="2009-I" size="8" maxlength="8"  disabled="disabled"/>
+                              </span></td>
+                            </tr>
+                            <tr>
+                              <td width="110">&nbsp;</td>
+                              <td width="682">&nbsp;</td>
+        </tr>
+                            <tr>
+                              <td><span class="Estilo9">Carrera:</span></td>
+                              <td><span class="Estilo9">
+                              <input name="n31[]" type="text" class="Estilo9" id="n31[]" value="INGENIERIA DE SISTEMAS" size="55" maxlength="100" disabled="disabled" />
+                              </span></td>
+                            </tr>
+                        <tr>
+                              <td width="109">&nbsp;</td>
+                              <td width="678">&nbsp;</td>
+        </tr>   
+      </table>
+      <table width="819" border="0">
+                            <tr>
+                              <td width="813" bgcolor="#0099FF"><span class="Estilo3">Otros Datos Adicionales</span></td>
+                            </tr>
+      </table>
+      <table width="802" border="0">
+                            <tr>
+                              <td width="110">&nbsp;</td>
+                              <td width="682">&nbsp;</td>
+        </tr>
+                            <tr>
+                              <td width="110"><span class="Estilo9">Codigo Acceso:</span></td>
+                              <td width="682"><span class="Estilo9">
+                                <input name="n28[]" type="text" class="Estilo9" id="n28[]" value="GENERAL" size="20" maxlength="50" disabled="disabled"/>
+                                Fecha De Registro:
+                                <input name="n29[]" type="text" class="Estilo9" id="n29[]" value="12/06/2010" size="10" maxlength="10" disabled="disabled" />
+                              </span></td>
+                            </tr>
+                            <tr>
+                              <td width="110">&nbsp;</td>
+                              <td width="682">&nbsp;</td>
+        </tr>   
+      </table>
+      
+      <table width="815" border="0">
+    <tr>
+                              <td width="809" bgcolor="#00CC00"><span class="Estilo3">----&gt; La siguiente informacion es referencial, si algun dato estuviera mal porfavor envienos un e-mail : ununet@gmail.com</span></td>
+        </tr>
+      </table>
+	</div>
+<!-- 1 --------------------------------------------------------------------><!-- 1 -------------------------------------------------------------------->
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+</form>
+</body>
+</html>
+

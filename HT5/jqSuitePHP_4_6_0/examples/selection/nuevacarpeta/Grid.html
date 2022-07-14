@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>jqGrid Ejemplo 1: Cargar datos de una tabla MySql </title>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/flick/jquery-ui-1.8.16.custom.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="jqgrid/css/ui.jqgrid.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="jqgrid/js/i18n/grid.locale-es.js" type="text/javascript"></script>
+        <script src="jqgrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+        
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+           jQuery("#tblclientes").jqGrid({
+                    url:'clientes.php',
+                    datatype: 'json',
+                    mtype: 'POST',
+                    colNames:['Codigo','acceso'],
+                    colModel:[
+                        {name:'Codigo', index:'Codigo', width:50, resizable:false, align:"center"},
+                        {name:'Acceso', index:'Acceso', width:160,resizable:false, sortable:true}
+                    ],
+                    pager: '#paginacion',
+                    rowNum:10,
+                    rowList:[15,30],
+                    sortname: 'Codigo',
+                    sortorder: 'asc',
+                    viewrecords: true,
+                    caption: 'CLIENTES'
+                });              
+            });
+        </script>
+
+    </head>
+    <body>
+        <table id="tblclientes"></table>
+        <div id="paginacion"> </div>
+    </body>
+</html>

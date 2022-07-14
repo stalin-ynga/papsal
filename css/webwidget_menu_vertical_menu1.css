@@ -1,0 +1,61 @@
+.webwidget_menu_vertical_menu1{
+    padding: 0px;
+    margin: 0px;
+    width: 172px;
+    font: 14px/31px Trebuchet MS,Segoe UI,Arial;
+}
+.webwidget_menu_vertical_menu1 ul{
+    padding: 0px;
+    margin: 0px;
+    font-family:Arial;
+}
+.webwidget_menu_vertical_menu1 ul li{
+    padding: 0px;
+    margin: 0px;
+    height: 31px;
+    position: relative;
+}
+.webwidget_menu_vertical_menu1 ul li h3{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #8F0600;
+    font-weight: bold;
+}
+.webwidget_menu_vertical_menu1 ul .top_border{
+    height: 3px;
+}
+.webwidget_menu_vertical_menu1 ul .bottom_border{
+    height: 3px;
+}
+.webwidget_menu_vertical_menu1 ul li a{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 25px;
+    text-decoration: none;
+    display: block;
+}
+.webwidget_menu_vertical_menu1 ul li ul{
+    padding: 0px;
+    margin: 0px;
+    width: 172px;
+    display: none;
+    position: absolute;
+    z-index: 999999;
+    top: 0px;
+    left: 172px;
+    list-style: none;
+}
+.webwidget_menu_vertical_menu1 ul li ul li{
+    padding: 0px;
+    margin: 0px;
+    border:none;
+    word-wrap:break-word;
+    height: 27px;
+}
+.webwidget_menu_vertical_menu1 ul li ul li a{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+}

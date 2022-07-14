@@ -1,0 +1,3 @@
+In this example we demonstarte how to load the dynamic data via ajax and
+update existing one.
+

@@ -1,0 +1,2 @@
+Master Detail example.
+This example is created from Marco Fantasia working at <a href="http://www.sys-man.it/">Sys Man</a>
